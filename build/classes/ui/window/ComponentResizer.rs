@@ -1,0 +1,1 @@
+spreadchat.ui.window.ComponentResizer
