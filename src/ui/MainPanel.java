@@ -19,6 +19,7 @@ import spread.SpreadException;
 import spread.SpreadGroup;
 import spread.SpreadMessage;
 import ui.swing.webLaf.MessagePanel;
+import ui.swing.webLaf.TelaCustomBorder;
 import ui.swing.webLaf.UserPanel;
 
 /**
@@ -36,19 +37,17 @@ public class MainPanel extends javax.swing.JPanel {
     private String grupo;
     private int porta;
     private boolean priority;
-    private JDialog conectionDialog;
+    private TelaCustomBorder conectionDialog;
     private List<SpreadGroup> users;
     
     public MainPanel() {
                
         initComponents();
         users = new ArrayList<>();
-        conectionDialog = new JDialog();
-        conectionDialog.add(conectionPanel);
-        conectionDialog.setModal(true);
+        conectionDialog = new TelaCustomBorder("conectar");
+        conectionDialog.setPanel(conectionPanel);
         conectionDialog.setLocationRelativeTo(null);
-        conectionDialog.setVisible(true);   
-        conectionDialog.pack();
+        conectionDialog.setVisible(true);
                 
     }
     
